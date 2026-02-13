@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="main-container head">
+            <h2>👟 Mi Tienda</h2>
+            <div class="search-box">
+                <input type="text" id="busqueda" placeholder="Buscar..." onkeyup="filtrarBusqueda()">
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="hero-banner">
+            <h1>-20% DTO.</h1>
+            <p>Solo por hoy en zapatillas</p>
+        </div>
+        <h3>Destacados</h3>
+        <div class="grid-productos" id="grid"></div>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="location.href='index.html'">🏠<br>Inicio</div>
+        <div class="nav-item" onclick="window.open('https://wa.me/5218131615365')">💬<br>Chat</div>
+        <div class="nav-item cart-float" onclick="location.href='carrito.html'">
+            🛒<span id="cart-count">0</span>
+        </div>
+        <div class="nav-item" onclick="verFavoritos()">❤️<br>Favs</div>
+        <div class="nav-item" onclick="alert('Perfil en mantenimiento')">👤<br>Perfil</div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { renderizarTienda(); actualizarContador(); });</script>
+</body>
+</html>

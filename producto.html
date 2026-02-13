@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Mi Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background:#eee;">
+
+    <button onclick="location.href='index.html'" style="position:absolute; top:20px; left:20px; border-radius:50%; width:40px; height:40px; border:none; background:white; cursor:pointer; z-index:10; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">←</button>
+
+    <div class="container" style="padding:0; background: transparent;">
+        <div class="img-hero-container">
+            <img id="p-img" src="" class="img-hero" alt="Producto">
+        </div>
+        
+        <div class="producto-detalle-container">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <h2 id="p-nombre" style="margin: 0;">Cargando...</h2>
+                    <small id="p-cat" style="color: #888; font-size: 0.9rem;">Categoría</small>
+                </div>
+                <h3 id="p-precio" style="color:var(--primary); margin: 0;">$0.00</h3>
+            </div>
+            
+            <p style="margin:20px 0; color:#666; font-size:0.95rem; line-height: 1.5;">Calzado de alta gama diseñado para la comodidad diaria y el rendimiento deportivo extremo. Fabricado con materiales de primera calidad.</p>
+
+            <h4 style="margin-bottom: 10px;">Selecciona talla:</h4>
+            <div style="display:flex; gap:10px; margin-bottom: 25px;">
+                <button class="talla-btn" onclick="setTalla('S', this)">S</button>
+                <button class="talla-btn" onclick="setTalla('M', this)">M</button>
+                <button class="talla-btn" onclick="setTalla('L', this)">L</button>
+                <button class="talla-btn" onclick="setTalla('XL', this)">XL</button>
+            </div>
+
+            <button class="btn-main btn-black" onclick="añadirAlCarrito()">Agregar al Carrito 🛒</button>
+            <button class="btn-main btn-whatsapp" onclick="comprarYaWA()">Comprar por WhatsApp 💬</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', cargarDetalle);</script>
+</body>
+</html>
